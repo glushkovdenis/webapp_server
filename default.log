@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-04-21T11:38:57.564328400Z</date>
+  <millis>1587469137564</millis>
+  <nanos>328400</nanos>
+  <sequence>0</sequence>
+  <logger>com.console.springTest.SpringTestApplication</logger>
+  <level>INFO</level>
+  <class>com.console.springTest.SpringTestApplication</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Главный класс серверного приложения запущен.</message>
+</record>
