@@ -32,9 +32,7 @@ dependencies {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 	implementation 'com.google.appengine:appengine-api-1.0-sdk:1.9.80'
-	implementation 'org.springframework.cloud:spring-cloud-gcp-starter-sql-postgresql:1.2.2.RELEASE'
 	implementation 'org.springframework.boot:spring-boot-maven-plugin:2.2.6.RELEASE'
-	implementation 'com.google.cloud.sql:postgres-socket-factory:1.0.15'
 	implementation 'org.postgresql:postgresql:42.2.11'
 	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-hibernate3:2.5.3'
 	implementation 'org.springframework:spring-web:5.2.4.RELEASE'
