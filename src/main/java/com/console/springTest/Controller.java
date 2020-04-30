@@ -47,13 +47,25 @@ public class Controller {
             ResultSetMetaData rsmd = rs.getMetaData();
             int columnsNumber = rsmd.getColumnCount();
 
+            result.append("\n[");
             while (rs.next()) {
+                result.append("\n{");
                 for (int i = 1; i < columnsNumber + 1; i++) {
                     if (i > 1) result.append("\n");
-                    result.append(rsmd.getColumnName(i)).append(" : ").append(rs.getString(i));
+                    result
+                            .append("\"")
+                            .append(rsmd.getColumnName(i))
+                            .append("\"")
+                            .append(" : ")
+                            .append("\"")
+                            .append(rs.getString(i))
+                            .append("\"");
+                    if(i != columnsNumber) result.append(",");
                 }
-                result.append("\n\n");
+                result.append("\n}");
+                if (!rs.isLast()) result.append(",");
             }
+            result.append("\n]");
         } catch (SQLException e) {
             System.out.println("Error in get SQLException, code = " + e.getErrorCode());
         } finally {
@@ -103,13 +115,25 @@ public class Controller {
             ResultSetMetaData rsmd = rs.getMetaData();
             int columnsNumber = rsmd.getColumnCount();
 
+            result.append("\n[");
             while (rs.next()) {
+                result.append("\n{");
                 for (int i = 1; i < columnsNumber + 1; i++) {
                     if (i > 1) result.append("\n");
-                    result.append(rsmd.getColumnName(i)).append(" : ").append(rs.getString(i));
+                    result
+                            .append("\"")
+                            .append(rsmd.getColumnName(i))
+                            .append("\"")
+                            .append(" : ")
+                            .append("\"")
+                            .append(rs.getString(i))
+                            .append("\"");
+                    if(i != columnsNumber) result.append(",");
                 }
-                result.append("\n\n");
+                result.append("\n}");
+                if (!rs.isLast()) result.append(",");
             }
+            result.append("\n]");
         } catch (SQLException e) {
             System.out.println("Error in showAll SQLException, code = " + e.getErrorCode());
         } finally {
@@ -118,6 +142,7 @@ public class Controller {
             stmt.close();
             con.close();
         }
+        System.out.println(result.toString());
         return result.toString();
     }
 
