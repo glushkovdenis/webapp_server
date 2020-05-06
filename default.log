@@ -2,9 +2,9 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2020-04-30T13:10:29.752963100Z</date>
-  <millis>1588252229752</millis>
-  <nanos>963100</nanos>
+  <date>2020-05-06T10:50:27.294047400Z</date>
+  <millis>1588762227294</millis>
+  <nanos>47400</nanos>
   <sequence>0</sequence>
   <logger>com.console.springTest.SpringTestApplication</logger>
   <level>INFO</level>

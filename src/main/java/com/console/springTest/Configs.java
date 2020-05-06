@@ -13,7 +13,7 @@ public class Configs {
     public DataSource getDataSource() {
         DataSourceBuilder dsb = DataSourceBuilder.create();
         dsb.driverClassName("org.postgresql.Driver");
-        dsb.url("jdbc:postgresql://localhost:5432/postgres");
+        dsb.url("jdbc:postgresql://localhost:5432/postres");
         dsb.username("postgres");
         dsb.password("postgres");
         return dsb.build();
